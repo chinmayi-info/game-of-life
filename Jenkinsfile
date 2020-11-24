@@ -1,4 +1,5 @@
 node('HRMS && QA') {
+    properties([pipelineTriggers([cron('30 * * * 1-5')])])
     stage('git') {
         git 'https://github.com/chinmayi-info/game-of-life.git'
     }
