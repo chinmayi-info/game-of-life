@@ -28,4 +28,3 @@ node('HRMS&&QA') {
         archiveArtifacts artifacts: 'gameoflife-web/target/*.war', followSymlinks: false
     }
 }
-0 comments on commit 6dff85e
