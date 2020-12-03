@@ -23,14 +23,14 @@ pipeline {
 
         choice(
             name: 'BranchToBuild',
-            choices: ['DeclarativePipeline', 'ScriptedPipeline', 'master'],
+            choices: ['declarativepipeline', 'scriptedpipeline', 'master'],
             description: 'Branch to be build'
         )
     }
     stages {
         stage('git'){
             steps {
-                git branch: "${params.BranchToBuild}", url: 'https://github.com/dummyrepos/game-of-life.git'
+                git branch: "${params.BranchToBuild}", url: 'https://github.com/chinmayi-info/game-of-life.git'
             }
         }
         stage('debug build') {
